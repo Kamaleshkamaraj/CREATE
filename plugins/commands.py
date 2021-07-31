@@ -15,7 +15,7 @@ async def start(bot, cmd):
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             try:
                 user = await bot.get_chat_member(int(AUTH_CHANNEL), cmd.from_user.id)
-                if user.status == "kicked":
+                if user.status == "kicked":ka
                     await bot.send_message(
                         chat_id=cmd.from_user.id,
                         text="Sorry Sir, You are Banned to use me.",
@@ -91,11 +91,11 @@ async def start(bot, cmd):
                     [
                         InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
                         InlineKeyboardButton("More Movies", url="https://t.me/create_tamilan")
-                    
-
-
+                                ]
+                            ]
+                        ]
                     ]
-                ]
+                )
             )
         )
 
